@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /cdn-cgi/
+Disallow: /blog/draft/
+
+Sitemap: https://pregnancycalculatorhub.com/sitemap.xml
+
+# Block search of non-essential pages
+Disallow: /thank-you.html
+
+# Crawl delay for good measure
+Crawl-delay: 1
