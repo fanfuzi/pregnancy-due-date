@@ -8,7 +8,7 @@ window.SITE_CONFIG = {
     adsensePublisherId: 'YOUR-PUB-ID',
 
     // Amazon Associates ID (without ?tag= prefix, e.g. 'YOUR-TAG-20')
-    amazonAssociateId: 'YOUR-TAG-20',
+    amazonAssociateId: 'justinlin-20',
 
     // Site basic info
     siteName: 'Pregnancy Calculator Hub',
