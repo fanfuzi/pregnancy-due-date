@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregnancy Trimesters Guide Pin</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #f5f5f5;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+        .pin-container {
+            width: 1000px;
+            height: 1500px;
+            background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 50%, #ce93d8 100%);
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+        .badge {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            background: #fff;
+            color: #6a1b9a;
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-size: 24px;
+            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            margin-top: 20px;
+        }
+        .header h1 {
+            font-size: 68px;
+            font-weight: 800;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            line-height: 1.1;
+            margin-bottom: 15px;
+        }
+        .header .subtitle {
+            font-size: 30px;
+            color: #fff;
+            font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        .trimester {
+            background: rgba(255,255,255,0.95);
+            border-radius: 25px;
+            padding: 35px 40px;
+            margin-bottom: 25px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .trimester-title {
+            font-size: 38px;
+            font-weight: 800;
+            color: #6a1b9a;
+            margin-bottom: 15px;
+        }
+        .trimester-weeks {
+            font-size: 26px;
+            color: #888;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        .trimester-desc {
+            font-size: 26px;
+            color: #444;
+            line-height: 1.4;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 25px;
+            border-top: 3px dashed rgba(255,255,255,0.6);
+        }
+        .footer p {
+            font-size: 26px;
+            color: #fff;
+            font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="pin-container">
+        <div class="badge">YOUR GUIDE</div>
+
+        <div class="header">
+            <h1>Pregnancy<br>Trimesters</h1>
+            <div class="subtitle">What to expect in each stage</div>
+        </div>
+
+        <div class="trimester">
+            <div class="trimester-title">🤰 First Trimester</div>
+            <div class="trimester-weeks">Weeks 1-12</div>
+            <div class="trimester-desc">Major organs form. Morning sickness, fatigue, and breast tenderness are common.</div>
+        </div>
+
+        <div class="trimester">
+            <div class="trimester-title">👶 Second Trimester</div>
+            <div class="trimester-weeks">Weeks 13-26</div>
+            <div class="trimester-desc">Energy returns. You may feel first movements. The "golden trimester" for many moms.</div>
+        </div>
+
+        <div class="trimester">
+            <div class="trimester-title">🌟 Third Trimester</div>
+            <div class="trimester-weeks">Weeks 27-40+</div>
+            <div class="trimester-desc">Rapid growth. Shortness of breath, Braxton Hicks, and nesting instinct kick in.</div>
+        </div>
+
+        <div class="footer">
+            <p>Source: pregnancycalculatorhub.com</p>
+        </div>
+    </div>
+</body>
+</html>

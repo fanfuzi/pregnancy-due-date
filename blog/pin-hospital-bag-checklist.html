@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Bag Checklist Pin</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #f5f5f5;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+        .pin-container {
+            width: 1000px;
+            height: 1500px;
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 50%, #ffcc80 100%);
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+        .badge {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            background: #fff;
+            color: #ef6c00;
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-size: 24px;
+            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            margin-top: 20px;
+        }
+        .header h1 {
+            font-size: 68px;
+            font-weight: 800;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            line-height: 1.1;
+            margin-bottom: 15px;
+        }
+        .header .subtitle {
+            font-size: 30px;
+            color: #fff;
+            font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        .sections {
+            display: flex;
+            gap: 20px;
+            flex: 1;
+        }
+        .section {
+            background: rgba(255,255,255,0.95);
+            border-radius: 25px;
+            padding: 30px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .section-title {
+            font-size: 30px;
+            font-weight: 800;
+            color: #ef6c00;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .item {
+            font-size: 22px;
+            color: #444;
+            margin-bottom: 14px;
+            padding-left: 30px;
+            position: relative;
+        }
+        .item::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #ef6c00;
+            font-weight: bold;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 25px;
+            border-top: 3px dashed rgba(255,255,255,0.6);
+        }
+        .footer p {
+            font-size: 26px;
+            color: #fff;
+            font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="pin-container">
+        <div class="badge">ESSENTIALS</div>
+
+        <div class="header">
+            <h1>Hospital Bag<br>Checklist</h1>
+            <div class="subtitle">What to pack for labor & delivery</div>
+        </div>
+
+        <div class="sections">
+            <div class="section">
+                <div class="section-title">For Mom</div>
+                <div class="item">ID & insurance card</div>
+                <div class="item">Phone charger (long cord)</div>
+                <div class="item">Robe & warm socks</div>
+                <div class="item">Lip balm & hair ties</div>
+                <div class="item">Going-home outfit</div>
+                <div class="item">Toiletries bag</div>
+                <div class="item">Postpartum pads</div>
+            </div>
+            <div class="section">
+                <div class="section-title">For Baby</div>
+                <div class="item">Going-home outfit</div>
+                <div class="item">Carseat (installed)</div>
+                <div class="item">Swaddle blankets</div>
+                <div class="item">Hat & mittens</div>
+                <div class="item">Pacifier</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Source: pregnancycalculatorhub.com</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prenatal Vitamins Guide Pin</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #f5f5f5;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+        .pin-container {
+            width: 1000px;
+            height: 1500px;
+            background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 50%, #ffe082 100%);
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+        .badge {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            background: #fff;
+            color: #f57f17;
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-size: 24px;
+            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            margin-top: 20px;
+        }
+        .header h1 {
+            font-size: 66px;
+            font-weight: 800;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            line-height: 1.1;
+            margin-bottom: 15px;
+        }
+        .header .subtitle {
+            font-size: 28px;
+            color: #fff;
+            font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        .nutrients {
+            background: rgba(255,255,255,0.95);
+            border-radius: 30px;
+            padding: 40px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .nutrient {
+            display: flex;
+            align-items: center;
+            margin-bottom: 18px;
+            font-size: 28px;
+            color: #333;
+            font-weight: 500;
+        }
+        .check {
+            width: 45px;
+            height: 45px;
+            background: #f57f17;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            font-weight: bold;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 25px;
+            border-top: 3px dashed rgba(255,255,255,0.6);
+        }
+        .footer p {
+            font-size: 26px;
+            color: #fff;
+            font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="pin-container">
+        <div class="badge">KEY NUTRIENTS</div>
+
+        <div class="header">
+            <h1>Prenatal Vitamins<br>Essentials</h1>
+            <div class="subtitle">Which nutrients matter most & when to start</div>
+        </div>
+
+        <div class="nutrients">
+            <div class="nutrient">
+                <div class="check">✓</div>
+                <span><strong>Folic Acid</strong> — 400-800 mcg (prevents birth defects)</span>
+            </div>
+            <div class="nutrient">
+                <div class="check">✓</div>
+                <span><strong>Iron</strong> — 27 mg (supports blood volume increase)</span>
+            </div>
+            <div class="nutrient">
+                <div class="check">✓</div>
+                <span><strong>Calcium</strong> — 1000 mg (protects your bones)</span>
+            </div>
+            <div class="nutrient">
+                <div class="check">✓</div>
+                <span><strong>Vitamin D</strong> — 600-800 IU (immune + bone health)</span>
+            </div>
+            <div class="nutrient">
+                <div class="check">✓</div>
+                <span><strong>DHA / Omega-3</strong> — 200-300 mg (brain development)</span>
+            </div>
+            <div class="nutrient">
+                <div class="check">✓</div>
+                <span><strong>Iodine</strong> — 150 mcg (thyroid + brain)</span>
+            </div>
+            <div class="nutrient">
+                <div class="check">✓</div>
+                <span><strong>Choline</strong> — 450 mg (often forgotten!)</span>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Source: pregnancycalculatorhub.com</p>
+        </div>
+    </div>
+</body>
+</html>
