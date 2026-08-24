@@ -1,0 +1,24 @@
+# Cloudflare Pages Redirects
+# Fix .html extension redirects for Google
+
+# Homepage
+/index.html / 301
+
+# Blog pages
+/blog/how-to-calculate-due-date.html /blog/how-to-calculate-due-date 301
+/blog/due-date-calculator-accuracy.html /blog/due-date-calculator-accuracy 301
+/blog/first-trimester-checklist.html /blog/first-trimester-checklist 301
+/blog/pregnancy-trimesters-guide.html /blog/pregnancy-trimesters-guide 301
+/blog/what-to-pack-hospital-bag.html /blog/what-to-pack-hospital-bag 301
+/blog/pregnancy-symptoms-by-week.html /blog/pregnancy-symptoms-by-week 301
+/blog/early-signs-of-pregnancy.html /blog/early-signs-of-pregnancy 301
+/blog/pregnancy-test-accuracy.html /blog/pregnancy-test-accuracy 301
+/blog/prenatal-vitamins-guide.html /blog/prenatal-vitamins-guide 301
+/blog/can-you-get-pregnant-on-your-period.html /blog/can-you-get-pregnant-on-your-period 301
+
+# Other pages
+/about.html /about 301
+/privacy-policy.html /privacy-policy 301
+
+# Google verification
+/googlef81d0f696dce2c05.html /googlef81d0f696dce2c05 301
