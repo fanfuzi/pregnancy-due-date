@@ -1,0 +1,12 @@
+{
+  "name": "pregnancy-calculator-hub",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Pregnancy due date calculator and blog (Cloudflare Pages static site)",
+  "scripts": {
+    "build:css": "tailwindcss -i src/input.css -o css/tailwind.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}

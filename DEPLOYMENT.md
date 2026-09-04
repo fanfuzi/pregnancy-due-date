@@ -1,38 +1,35 @@
 # DEPLOYMENT.md - Pregnancy Due Date Calculator
 
-## Current Status
-- ✅ GitHub: https://github.com/fanfuzi/pregnancy-due-date
-- ✅ Cloudflare Pages: https://pregnancy-due-date.pages.dev (primary live URL)
-- ✅ All files deployed and live
+## Live URLs
+- Primary domain: https://pregnancycalculatorhub.com
+- Cloudflare Pages project: `pregnancy-due-date` (https://pregnancy-due-date.pages.dev)
+- GitHub: https://github.com/fanfuzi/pregnancy-due-date
 
-## Next Steps
+## Publish workflow
+1. One-time setup: `npm install`
+2. Write or edit content
+3. `bash publish.sh "commit message"`
+   - rebuilds `css/tailwind.css` (compiled Tailwind)
+   - commits, pushes to GitHub, and deploys via `wrangler pages deploy`
 
-### 1. Buy a domain (recommended)
-Buy one of these from Namecheap/GoDaddy:
-- `pregnancycalculatorhub.com` (brand match)
-- `duedatecalculatorhub.com` (exact match)
-- `weekbyweekpregnancy.com` (long-tail keyword)
+## Keep CSS in sync (important)
+The site uses **compiled Tailwind CSS** (`css/tailwind.css`), not the Tailwind CDN.
+- Source: `src/input.css` + `tailwind.config.js`
+- Scanned content: `index.html`, `about.html`, `privacy-policy.html`, `blog/**/*.html`, `js/**/*.js`
+- After adding new utility classes to HTML, run `npm run build:css` (publish.sh does this automatically).
 
-After buying:
-1. Add site in Cloudflare Dashboard
-2. Change nameservers at your registrar to Cloudflare's
-3. Add custom domain in Cloudflare Pages → get free SSL
+## E-E-A-T / author & medical review (TODO — do this to rank)
+The author is currently `Pregnancy Calculator Hub Editorial Team` (in each article's byline + JSON-LD). To strengthen trust signals, replace it with a real named author and ideally add a credentialed medical reviewer:
 
-### 2. Connect GitHub auto-deploy
-Cloudflare Pages can auto-deploy on every push:
-1. Go to Cloudflare Dashboard → Pages → pregnancy-due-date
-2. Settings → Build settings → Connect to Git
-3. Authorize GitHub and select `fanfuzi/pregnancy-due-date`
-4. Production branch: `main`
-5. Save
+1. Use a real person's name and credentials (editorial or clinical background).
+2. Add a "Medically reviewed by `<Name>`, `<credentials>`" line under the byline in each article.
+3. Update JSON-LD `author` to a `Person` (and add optional `reviewedBy`).
+4. Do **not** fabricate names or credentials — Google treats fake medical credentials as spam and it is harmful to readers.
 
-### 3. Replace domain placeholders
-Search and replace `pregnancycalculatorhub.com` with your actual domain in:
-- `index.html` (title, meta, OG, canonical, JSON-LD)
-- `blog/*.html` (canonical links)
-- `sitemap.xml` (all URLs)
-- `robots.txt` (Sitemap line)
+## Cloudflare settings (one-time, in dashboard)
+- 301 redirect `pregnancy-due-date.pages.dev` → `https://pregnancycalculatorhub.com` to consolidate authority. Canonical tags already point to the main domain, so this is a belt-and-suspenders step.
+- Custom domain + SSL are already active.
 
-### 4. Monetization (when ready)
-- AdSense: Uncomment the `<script>` in `index.html` head and replace `YOUR-PUB-ID`
-- Amazon Associates: Add product links in the blog articles
+## Monetization (when ready)
+- AdSense: set `adsensePublisherId` in `js/config.js` (replace `YOUR-PUB-ID`).
+- Amazon Associates: `amazonAssociateId` is already set to `justinlin-20`.

@@ -9,6 +9,13 @@ cd "$SITE_DIR"
 
 COMMIT_MSG="${1:-feat: new content update}"
 
+echo "🎨 Building Tailwind CSS..."
+if [ -f node_modules/.bin/tailwindcss ]; then
+    npm run build:css
+else
+    echo "⚠️  node_modules missing — run 'npm install' once to enable CSS builds."
+fi
+
 echo "📝 Adding all changes..."
 git add -A
 
