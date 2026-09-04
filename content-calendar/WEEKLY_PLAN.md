@@ -18,12 +18,12 @@
 - [x] pregnancy-test-accuracy ✅
 
 ### Week 2
-- [ ] Prenatal Vitamins: Which Ones to Take & When to Start
-- [ ] Can You Get Pregnant on Your Period? Myths & Facts
+- [x] Prenatal Vitamins: Which Ones to Take & When to Start ✅
+- [x] Can You Get Pregnant on Your Period? Myths & Facts ✅
 
 ### Week 3
-- [ ] Second Trimester: What to Expect in Weeks 13-26
-- [ ] Pregnancy Food Cravings: Why They Happen & Healthy Alternatives
+- [x] Second Trimester: What to Expect in Weeks 13-26 ✅
+- [x] Pregnancy Food Cravings: Why They Happen & Healthy Alternatives ✅
 
 ### Week 4
 - [ ] Third Trimester: What to Expect & Warning Signs
