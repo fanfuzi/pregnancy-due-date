@@ -28,9 +28,17 @@ git commit -m "$COMMIT_MSG" || {
 }
 
 echo "🚀 Pushing to GitHub..."
-git push origin main
+git push origin main || {
+    echo "⚠️  git push failed (network/credentials?) — continuing with deploy anyway."
+    echo "   Deploy uses the local folder, so this is safe; push later with: git push origin main"
+}
 
 echo "☁️  Deploying to Cloudflare Pages..."
-wrangler pages deploy "$SITE_DIR" --project-name=pregnancy-due-date
+wrangler pages deploy "$SITE_DIR" --project-name=pregnancy-due-date || {
+    echo "❌ Deploy failed. Common causes:"
+    echo "   - Not logged in: run 'wrangler login' once, then retry."
+    echo "   - Or set CLOUDFLARE_API_TOKEN and retry."
+    exit 1
+}
 
 echo "✅ Done! Don't forget to request indexing in Google Search Console."
