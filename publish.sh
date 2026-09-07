@@ -16,6 +16,9 @@ else
     echo "⚠️  node_modules missing — run 'npm install' once to enable CSS builds."
 fi
 
+echo "🔍 Running SEO consistency check..."
+npm run check
+
 echo "📝 Adding all changes..."
 git add -A
 

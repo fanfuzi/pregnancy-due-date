@@ -1,10 +1,19 @@
 # Cloudflare Pages Redirects
-# Fix .html extension redirects for Google
+# Convention: every page is served at its clean URL (no .html) and the .html
+# form 301-redirects to it. Cloudflare Pages already serves clean URLs for
+# *.html files automatically; this file is belt-and-suspenders and makes the
+# mapping explicit for Search Console.
+#
+# MAINTENANCE: when you add a new blog page, add its .html -> clean rule here
+# (alphabetical order), or the .html URL will still work via Cloudflare's
+# automatic clean-URL handling but the explicit rule keeps this file accurate.
+# Keep the exact list in sync with sitemap.xml (clean URLs only).
 
 # Homepage
 /index.html / 301
 
 # Blog pages
+/blog/index.html /blog/ 301
 /blog/how-to-calculate-due-date.html /blog/how-to-calculate-due-date 301
 /blog/due-date-calculator-accuracy.html /blog/due-date-calculator-accuracy 301
 /blog/first-trimester-checklist.html /blog/first-trimester-checklist 301
@@ -15,10 +24,20 @@
 /blog/pregnancy-test-accuracy.html /blog/pregnancy-test-accuracy 301
 /blog/prenatal-vitamins-guide.html /blog/prenatal-vitamins-guide 301
 /blog/can-you-get-pregnant-on-your-period.html /blog/can-you-get-pregnant-on-your-period 301
+/blog/second-trimester-guide.html /blog/second-trimester-guide 301
+/blog/pregnancy-food-cravings.html /blog/pregnancy-food-cravings 301
 
 # Other pages
 /about.html /about 301
 /privacy-policy.html /privacy-policy 301
 
-# Google verification
+# Google site-verification file.
+# NOTE: Google prefers the verification file served at its exact URL. Because
+# Cloudflare auto-cleans .html URLs, prefer DNS TXT or the <meta> method for
+# future re-verification (see MAINTENANCE.md). This rule keeps the file
+# reachable with 200 at the clean URL.
 /googlef81d0f696dce2c05.html /googlef81d0f696dce2c05 301
+
+# Pinterest "pin" landing pages (blog/pin-*.html) are intentionally NOT listed:
+# they carry <meta name="robots" content="noindex, nofollow"> and should not be
+# promoted or indexed.

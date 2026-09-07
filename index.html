@@ -3,12 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
 
     <!-- SEO Meta Tags -->
-    <title>Pregnancy Due Date Calculator - Accurate & Free | Week by Week</title>
+    <title>Pregnancy Due Date Calculator: Free & Accurate</title>
     <meta name="description" content="Free pregnancy due date calculator. Calculate your due date based on last menstrual period (LMP), conception date, or IVF transfer date. Get week-by-week pregnancy info.">
     <meta name="keywords" content="pregnancy due date calculator, due date calculator, pregnancy week calculator, LMP calculator, conception calculator, IVF due date, pregnancy timeline, when is my due date">
     <meta name="author" content="Pregnancy Calculator Hub">
@@ -41,8 +38,8 @@
     }
     </script>
 
-    <!-- AdSense Placeholder - Replace with your pub-id when approved -->
-    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR-PUB-ID" crossorigin="anonymous"></script> -->
+    <!-- AdSense (enable only when approved; do NOT add crossorigin to the loader):
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR-PUB-ID"></script> -->
 
     <!-- Compiled Tailwind CSS -->
     <link rel="stylesheet" href="/css/tailwind.css">
@@ -82,11 +79,14 @@
         <div class="bg-white rounded-2xl shadow-lg p-6 md:p-10">
             <h2 class="text-2xl font-bold text-gray-800 mb-6">Calculate Your Due Date</h2>
 
+            <!-- Inline validation message (populated by js/main.js) -->
+            <div id="form-message" role="alert" class="hidden mb-6 px-4 py-3 rounded-lg bg-red-50 border border-red-200 text-red-700 text-sm"></div>
+
             <!-- Method Tabs -->
             <div class="flex space-x-2 mb-8 border-b">
-                <button onclick="switchMethod('lmp')" id="tab-lmp" class="px-6 py-3 font-medium text-primary border-b-2 border-primary">Last Period (LMP)</button>
-                <button onclick="switchMethod('conception')" id="tab-conception" class="px-6 py-3 font-medium text-gray-500 hover:text-gray-700">Conception Date</button>
-                <button onclick="switchMethod('ivf')" id="tab-ivf" class="px-6 py-3 font-medium text-gray-500 hover:text-gray-700">IVF Transfer</button>
+                <button type="button" id="tab-lmp" class="px-6 py-3 font-medium text-primary border-b-2 border-primary">Last Period (LMP)</button>
+                <button type="button" id="tab-conception" class="px-6 py-3 font-medium text-gray-500 hover:text-gray-700">Conception Date</button>
+                <button type="button" id="tab-ivf" class="px-6 py-3 font-medium text-gray-500 hover:text-gray-700">IVF Transfer</button>
             </div>
 
             <!-- LMP Form -->
@@ -154,6 +154,7 @@
                         <div class="text-4xl mb-2">🤰</div>
                         <div class="text-sm text-gray-600 mb-1">Current Week</div>
                         <div id="result-week" class="text-2xl font-bold text-blue-600">-</div>
+                        <div id="result-week-detail" class="text-xs text-gray-500 mt-1"></div>
                     </div>
                     <div class="bg-purple-50 rounded-xl p-6 text-center">
                         <div class="text-4xl mb-2">👶</div>
@@ -166,11 +167,7 @@
                     <p class="text-sm text-gray-700"><strong>Disclaimer:</strong> This calculator provides estimates only. Actual delivery may vary. Consult your healthcare provider for medical advice.</p>
                 </div>
 
-                <!-- AdSense Placeholder 1 (Results Top) -->
-                <div class="adsense-placeholder bg-gray-100 rounded-lg p-4 text-center text-gray-500 mb-8" style="min-height: 100px;" data-ad-slot="HOME_TOP">
-                    <!-- AdSense will replace this when configured -->
-                    <i class="fas fa-ad mr-2"></i> Advertisement Space
-                </div>
+                <!-- 广告位：AdSense 审批通过后，按需在此处插入真实 ins 广告单元（data-ad-slot 用 AdSense 后台的数字 ID）。 -->
 
                 <!-- Current Trimester Info -->
                 <div id="trimester-info" class="bg-white border rounded-lg p-6 mb-8">
@@ -178,8 +175,7 @@
                     <p id="trimester-desc" class="text-gray-700">-</p>
                 </div>
 
-                <!-- Amazon Affiliate Placeholder -->
-                <!-- Example: <a href="https://www.amazon.com/dp/B08XYZ?tag=YOUR-TAG-20">Recommended for you</a> -->
+                <!-- 联盟商品位：如需在文章里展示推荐商品，用 js/config.js 的 recommendedProducts 渲染并带 tag=justinlin-20。 -->
             </div>
         </div>
 
@@ -211,6 +207,30 @@
                     <h3 class="font-bold text-lg mb-2 text-primary">Pregnancy Symptoms by Week</h3>
                     <p class="text-gray-600 text-sm">Common symptoms in each trimester and when to call your doctor.</p>
                 </a>
+                <a href="blog/early-signs-of-pregnancy" class="bg-white rounded-lg shadow p-6 hover:shadow-lg transition">
+                    <h3 class="font-bold text-lg mb-2 text-primary">Early Signs of Pregnancy</h3>
+                    <p class="text-gray-600 text-sm">How to tell you're pregnant before a missed period.</p>
+                </a>
+                <a href="blog/pregnancy-test-accuracy" class="bg-white rounded-lg shadow p-6 hover:shadow-lg transition">
+                    <h3 class="font-bold text-lg mb-2 text-primary">Pregnancy Test Accuracy</h3>
+                    <p class="text-gray-600 text-sm">When to test to avoid false negatives.</p>
+                </a>
+                <a href="blog/prenatal-vitamins-guide" class="bg-white rounded-lg shadow p-6 hover:shadow-lg transition">
+                    <h3 class="font-bold text-lg mb-2 text-primary">Prenatal Vitamins Guide</h3>
+                    <p class="text-gray-600 text-sm">Which nutrients matter and when to start.</p>
+                </a>
+                <a href="blog/can-you-get-pregnant-on-your-period" class="bg-white rounded-lg shadow p-6 hover:shadow-lg transition">
+                    <h3 class="font-bold text-lg mb-2 text-primary">Can You Get Pregnant on Your Period?</h3>
+                    <p class="text-gray-600 text-sm">Myths vs. facts about cycle timing and "safe days".</p>
+                </a>
+                <a href="blog/second-trimester-guide" class="bg-white rounded-lg shadow p-6 hover:shadow-lg transition">
+                    <h3 class="font-bold text-lg mb-2 text-primary">Second Trimester Guide</h3>
+                    <p class="text-gray-600 text-sm">Fetal development and comfort tips for weeks 13-26.</p>
+                </a>
+                <a href="blog/pregnancy-food-cravings" class="bg-white rounded-lg shadow p-6 hover:shadow-lg transition">
+                    <h3 class="font-bold text-lg mb-2 text-primary">Pregnancy Food Cravings</h3>
+                    <p class="text-gray-600 text-sm">Why cravings happen and healthy swaps.</p>
+                </a>
             </div>
         </section>
     </main>
@@ -218,7 +238,7 @@
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8 mt-12">
         <div class="max-w-6xl mx-auto px-4 text-center">
-            <p class="text-gray-400 mb-4">&copy; 2024 Pregnancy Calculator Hub. All rights reserved.</p>
+            <p class="text-gray-400 mb-4">&copy; 2026 Pregnancy Calculator Hub. All rights reserved.</p>
             <div class="space-x-4">
                 <a href="privacy-policy" class="text-gray-400 hover:text-white">Privacy Policy</a>
                 <a href="about" class="text-gray-400 hover:text-white">About</a>
@@ -230,11 +250,5 @@
     <script src="js/config.js"></script>
     <script src="js/main.js"></script>
     <script src="js/monetization.js"></script>
-
-    <!-- AdSense Placeholder 2 (Footer) -->
-    <div class="adsense-placeholder bg-gray-100 text-center text-gray-500 py-4" style="min-height: 60px;" data-ad-slot="HOME_BOTTOM">
-        <!-- AdSense will replace this when configured -->
-        <i class="fas fa-ad mr-2"></i> Advertisement Space
-    </div>
 </body>
 </html>

@@ -4,7 +4,8 @@
   "private": true,
   "description": "Pregnancy due date calculator and blog (Cloudflare Pages static site)",
   "scripts": {
-    "build:css": "tailwindcss -i src/input.css -o css/tailwind.css --minify"
+    "build:css": "tailwindcss -i src/input.css -o css/tailwind.css --minify",
+    "check": "node scripts/check-links.js"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.17"

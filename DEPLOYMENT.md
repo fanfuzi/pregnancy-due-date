@@ -9,8 +9,12 @@
 1. One-time setup: `npm install`
 2. Write or edit content
 3. `bash publish.sh "commit message"`
+   - runs `npm run check` (SEO consistency: canonical / sitemap / `_redirects` /
+     internal links / JSON-LD dates — see `scripts/check-links.js`)
    - rebuilds `css/tailwind.css` (compiled Tailwind)
    - commits, pushes to GitHub, and deploys via `wrangler pages deploy`
+
+> Full operating manual: **MAINTENANCE.md** (发布清单、GSC 索引问题应对、技术债、排障速查).
 
 ## Keep CSS in sync (important)
 The site uses **compiled Tailwind CSS** (`css/tailwind.css`), not the Tailwind CDN.
